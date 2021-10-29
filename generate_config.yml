@@ -3,6 +3,8 @@
   - name: Generate first config from Jinja2
     hosts: all
     tasks:
+      - include_vars:
+         file: group_vars/ent.yml
       - name: Enterprise Config
         template:
           src: "templates/template1.j2"  

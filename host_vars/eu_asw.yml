@@ -1,0 +1,6 @@
+---
+ vlans:
+  data: "100"
+  voice: "200"
+  video: "300"
+  native: "10"

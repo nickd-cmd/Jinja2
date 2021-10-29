@@ -1,5 +1,5 @@
 ---
-# Playbook to generate configuration of IOSXE device
+# Playbook to generate enterprise configuration of IOSXE device
   - name: Generate first config from Jinja2
     hosts: all
     tasks:

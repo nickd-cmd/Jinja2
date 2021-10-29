@@ -1,0 +1,11 @@
+---
+# Playbook to generate configuration of IOSXE device
+  - name: Generate first config from Jinja2
+    hosts: all
+    tasks:
+      - name: Enterprise Config
+        template:
+          src: "templates/template1.j2"  
+          dest: "completed_configs/{{inventory_hostname}}.cfg"
+        delegate_to: localhost
+

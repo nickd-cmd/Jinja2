@@ -1,0 +1,4 @@
+---
+  ent_pwd: "cisco"
+  ntp_server_pri: "10.10.10.1"
+  ntp_server_sec: "20.20.20.2"

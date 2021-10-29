@@ -1,0 +1,13 @@
+---
+# Playbook to generate enterprise configuration of IOSXE device
+  - name: Generate Configuration with nested templates
+    hosts: all
+    vars_files:
+     - group_vars/ent.yml
+     - host_vars/eu_asw.yml
+    tasks:
+      - name: EU ASW Config
+        template:
+          src: "templates/nested_template1.j2"
+          dest: "completed_configs/{{inventory_hostname}}.cfg"
+        delegate_to: localhost

@@ -1,6 +1,17 @@
 ---
- vlans:
-  data: "100"
-  voice: "200"
-  video: "300"
-  native: "10"
+vlans:  
+  - name: "Data"
+    tag: "100"
+    description: "Data VLAN"  
+
+  - name: "Voice"
+    tag: "200"
+    description: "Voice VLAN"
+
+  - name: "NGDE"
+    tag: "300"
+    description: "NGDE VLAN" 
+    
+  - name: "DVTC"
+    tag: "400"
+    description: "DVTC VLAN"  

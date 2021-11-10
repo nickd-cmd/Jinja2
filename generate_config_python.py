@@ -24,8 +24,10 @@ def main():
             break
         #add as many of the above elif's for region.  Each region will have it's own template and data file.
         else:
-            print("You did not enter a valid hostname. ex: EU-B200-DSW1")
-    #Need to make if true for retry
+            print("\nYou did not enter a valid hostname. ex: EU-B200-DSW1\n")
+            if retry == int(2): #exits out of the program after 3 failed attempts
+                exit() 
+
     print("The configuration will be titled 'generated_config.txt' and is located in this directory. \n")
     #create a file for config output.
     config = open("generated_config.txt", "w+")

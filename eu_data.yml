@@ -1,0 +1,18 @@
+---
+#Configuration is based on a 3560CX 8 Port Switch
+vlans:  
+  - name: "Data"
+    tag: "100"
+    description: "Data_VLAN"  
+
+  - name: "Voice"
+    tag: "200"
+    description: "Voice_VLAN"
+
+  - name: "NGDE"
+    tag: "300"
+    description: "NGDE_VLAN" 
+    
+  - name: "DVTC"
+    tag: "400"
+    description: "DVTC_VLAN"  

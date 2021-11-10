@@ -1,0 +1,20 @@
+---
+# Playbook to generate region specific config with enterprise baseline.  Templates are nested.
+  - name: Generate Configuration with Jinja2 templates
+    hosts: all
+    vars_files:
+     - group_vars/ent.yml
+     - host_vars/eu_asw.yml
+    tasks:
+      - name: EU ASW Config
+        when: "'euASW' in group_names" #confirm this is how we go through a host file
+        template:
+          src: "templates/euASW.j2"
+          dest: "completed_configs/{{inventory_hostname}}.cfg"
+        delegate_to: localhost 
+      - name: EU DSW Config
+        when: "'euDSW' in group_names"
+        template:
+          src: "tempaltes/euDSW.j2"
+          dest: "completed_configs/{{inventory_hostname}}.cfg"
+        delegate_to: localhost 

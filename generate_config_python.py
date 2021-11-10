@@ -22,9 +22,9 @@ def main():
             with open('se_data.yml') as y:
                 region_data = yaml.full_load(y)
             break
-        #add as many of the above elif's for region.  Each region will have it's own template and data file.
+        #add regions as needed.  Each region will have it's own template and data file.
         else:
-            print("\nYou did not enter a valid hostname. ex: EU-B200-DSW1\n")
+            print("\nYou did not enter a valid hostname. ex: EU-BLDG10-DSW01\n")
             if retry == int(2): #exits out of the program after 3 failed attempts
                 exit() 
 
